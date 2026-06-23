@@ -1,0 +1,135 @@
+/* ~/.config/rofi/config.rasi */
+
+* {
+  font: "JetBrainsMonoNL Nerd Font Propo 12";
+
+  bg: #1e1e2e;
+  bg-alt: #44475a;
+
+  fg: rgb(255, 255, 255);
+  accent: #ffb6c1;
+
+  background-color: transparent;
+  text-color: @fg;
+}
+
+configuration {
+  show-icons: true;
+}
+
+window {
+  width: 900px;
+  height: 750px;
+
+  border: 2px;
+  border-color: @accent; 
+
+  background-color: rgba(30,30,46,0.95); 
+}
+
+mainbox {
+  padding: 10px;
+  orientation: vertical;
+  children: [ containerbox ]; 
+}
+
+containerbox {
+  background-color: rgba(30,30,46,0);
+  orientation: horizontal;
+  children: [ sidebar, listbox ];
+}
+
+textcontainer {
+  orientation: horizontal;
+  children: [ textpadder, textbox, textpadder ];
+  expand: false;
+}
+
+textpadder {
+  padding: 0;
+  margin: 0;
+}
+
+textbox {
+  enabled: true;
+  font: "JetBrainsMonoNL Nerd Font Propo 12";
+
+  content: " ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣷⣤⣙⢻⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⡿⠛⠛⠿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⠿⣆⠀⠀⠀⠀\n⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀\n⠀⢀⣾⣿⣿⠿⠟⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠻⠿⣿⣿⣷⡀⠀\n⣠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⣄\n\n ⠀⠀⠀⠀⠀⠀⠀⠀ ARCH LINUX ⠀⠀⠀⠀⠀⠀⠀⠀\n";
+
+  expand: false;
+  text-color: @accent;
+  horizontal-align: center;
+
+  padding: 0;
+  margin: 0;
+}
+
+sidebar {
+    orientation: vertical;
+    width: 180px;
+    padding: 20px;
+    spacing: 20px;
+
+    background-color: @bg-alt;
+}
+
+button { 
+  background-color: @bg;
+  text-color: white;
+}
+
+button selected {
+    background-color: @accent;
+}
+
+listbox {
+    expand: true;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    padding: 12px;
+    background-color: @bg-alt;
+}
+
+entry {
+    placeholder: "";
+    placeholder-color: grey; 
+
+    padding: 6px 10px;
+    margin: 0;
+
+    text-color: white;
+
+    vertical-align: 0.5;
+}
+
+listview {
+    lines: 10;
+    spacing: 6;
+    padding: 10px;
+
+    background-color: transparent;
+}
+
+element {
+    padding: 8px; 
+
+    background-color: @bg-alt;
+
+    text-color: @fg;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: rgb(255, 255, 255);
+}
+
+configuration {
+    modes: [drun,run,window,ssh];
+
+    display-drun: " Apps";
+    display-run: " Terminal";
+    display-window: " Windows";
+    display-ssh: "󰌘 SSH";
+}
