@@ -1,0 +1,97 @@
+/* ~/.config/rofi/config.rasi */
+
+* {
+    font: "JetBrainsMonoNL Nerd Font Propo 12";
+
+    bg: #1e1e2e;
+    bg-alt: #44475a;
+
+    fg: rgb(255, 255, 255);
+    accent: #ffb6c1;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+  location: southeast;
+  anchor: southeast;
+
+  width: 150px;
+  height: 200px;
+
+  border: 2px;
+  border-color: @accent;
+  border-radius: 10px;
+
+  background-color: rgba(30,30,46,0.95);
+}
+
+mainbox {
+    orientation: vertical;
+    children: [ containerbox ]; 
+}
+
+containerbox {
+  orientation: horizontal;
+  children: [ listbox ];
+}
+
+button {
+  border-radius: 10px;
+}
+
+button selected {
+    background-color: @accent;
+    text-color: white;
+}
+
+listbox {
+    expand: true;
+    children: [ listview ];
+}
+
+inputbar {
+    padding: 12px;
+    background-color: @bg-alt;
+}
+
+entry {
+    placeholder: "";
+    placeholder-color: grey;
+
+    padding: 6px 10px;
+    margin: 0;
+
+    vertical-align: 0.5;
+}
+
+listview {
+    lines: 10;
+    spacing: 6;
+    padding: 10px;
+
+    background-color: transparent;
+}
+
+element {
+    padding: 8px;
+    border-radius: 8px;
+
+    background-color: #282a36;
+    text-color: @fg;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: rgb(255, 255, 255);
+}
+
+configuration {
+    modes: [drun,run,window,ssh];
+
+    display-drun: "󰣇 Apps";
+    display-run: " Terminal";
+    display-window: " Windows";
+    display-ssh: "󰌘 SSH";
+}
