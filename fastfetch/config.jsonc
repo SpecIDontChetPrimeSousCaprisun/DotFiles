@@ -1,0 +1,60 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "display": {
+    "separator": " "
+  },
+  "modules": [ 
+    "break",
+    "break", 
+    {
+      "type": "command",
+      "key": " ",
+      "text": "cat ~/.config/fastfetch/temp/topbar"
+    },
+    {
+      "type": "command",
+      "key": " ",
+      "text": "cat ~/.config/fastfetch/temp/' OS.txt'"
+    },
+    {
+      "type": "command",
+      "key": " ",
+      "text": "cat ~/.config/fastfetch/temp/'󰒋 Kernel.txt'"
+    },
+    {
+      "type": "command",
+      "key": " ",
+      "text": "cat ~/.config/fastfetch/temp/'󰏖 Packages.txt'"
+    },
+    {
+      "type": "command",
+      "key": " ",
+      "text": "cat ~/.config/fastfetch/temp/' Space.txt'"
+    },
+    {
+      "type": "command",
+      "key": " ",
+      "text": "cat ~/.config/fastfetch/temp/'󰇄 Host.txt'"
+    },
+    {
+      "type": "command",
+      "key": " ",
+      "text": "cat ~/.config/fastfetch/temp/' User.txt'"
+    },
+    {
+      "type": "command",
+      "key": " ",
+      "text": "cat ~/.config/fastfetch/temp/' Uptime.txt'"
+    },
+    {
+      "type": "command",
+      "key": " ",
+      "text": "cat ~/.config/fastfetch/temp/bottombar"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle"
+    }
+  ]
+}
